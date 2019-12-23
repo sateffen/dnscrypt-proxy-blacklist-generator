@@ -1,0 +1,11 @@
+# exclude
+.*
+node_modules/
+npm-debug.log
+*.txt
+
+# include
+!.gitignore
+!.eslintrc
+!.travis.yml
+!basicblacklist.txt

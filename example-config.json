@@ -1,0 +1,8 @@
+{
+    "target": "./target.txt",
+    "sources": [
+        "./basicblacklist.txt",
+        "https://raw.githubusercontent.com/RPiList/specials/master/easylist",
+        "https://raw.githubusercontent.com/RPiList/specials/master/notserious"
+    ]
+}
