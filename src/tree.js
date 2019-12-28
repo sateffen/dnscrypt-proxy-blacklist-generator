@@ -109,7 +109,7 @@ const validUrlCharacters = /^[\wäüöÄÖÜß.*-]+$/u;
  * @return {string|null}
  */
 function validateUrl(aUrl) {
-    let url = aUrl;
+    let url = aUrl.trim();
 
     if (aUrl[aUrl.length - 1] === '/') {
         url = url.slice(0, -1);
@@ -138,12 +138,12 @@ function addToTree(aUrl) {
     let iterator = baseNode;
 
     for (let i = urlParts.length - 1; i >= 0; i--) {
-        // if the current node is an explicitEnd, we don't need to append any children, as they are covered already
-        if (iterator.isExplicitEnd()) {
+        const part = urlParts[i];
+
+        if (iterator.isExplicitEnd() || i === 0 && part === '*') {
             break;
         }
 
-        const part = urlParts[i];
         const potentialChild = iterator.getChild(part);
 
         if (potentialChild) {
