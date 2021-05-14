@@ -6,7 +6,7 @@
     "lint": "eslint -c .eslintrc src"
   },
   "devDependencies": {
-    "eslint": "^7.5.0",
+    "eslint": "^7.26.0",
     "eslint-config-google": "^0.14.0"
   }
 }
